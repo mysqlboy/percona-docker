@@ -21,10 +21,12 @@ for i in `seq 30`; do
 done
 
 # Unpack and run Prometheus, replacing ":NODE_IP" in its config with the one given via "docker run -e NODE_IP=".
-cd ~
-tar xvfz prometheus-0.16.2.linux-amd64.tar.gz > /dev/null
-sed -e "s/:NODE_IP/$NODE_IP/g" /root/prometheus.yml > ./prometheus-0.16.2.linux-amd64/prometheus.yml
-cd prometheus-0.16.2.linux-amd64
+# cd ~
+# tar xvfz prometheus-0.16.2.linux-amd64.tar.gz > /dev/null
+# sed -e "s/:NODE_IP/$NODE_IP/g" /root/prometheus.yml > ./prometheus-0.16.2.linux-amd64/prometheus.yml
+
+# Start Prometheus
+cd /prometheus
 ./prometheus -config.file=prometheus.yml > log 2>&1 &
 
 # Install and run the Percona Datastore/API.
