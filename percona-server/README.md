@@ -11,6 +11,7 @@ For more information and related downloads for Percona Server and other Percona 
 These are the only official Percona Server Docker images, created and maintained by the Percona team. The image has the Percona Fractal Tree based storage engine `TokuDB` enabled. The available versions are:
 
     Percona Server 5.6.28-76.1 (tag: 5.6)
+    Percona Server 5.7.10-3-1 (tag: 5.7)
 
 Images are updated when new releases are published.
 
